@@ -1,14 +1,14 @@
 <?php
 
-namespace RM_GitHub_Plugin;
+namespace RM_GitHub_Plugin_RMPU;
 
 class Updater {
 
     // Update these four values for your plugin
-    private $repo_owner   = 'Jared-Nolt';
-    private $repo_name    = 'rm-github-plugin';
+    private $repo_owner   = 'rosewoodmarketing';
+    private $repo_name    = 'rm-plugin-updater';
     private $plugin_file  = 'rm-github-plugin.php'; // main plugin file name
-    private $plugin_name  = 'RM GitHub Plugin';
+    private $plugin_name  = 'RM Plugin Updater';
 
     public $plugin_slug;
     public $version;
@@ -29,7 +29,7 @@ class Updater {
 
         $this->plugin_slug   = dirname( plugin_basename( __DIR__ ) );
         $this->version       = defined( 'RM_GITHUB_PLUGIN_VERSION' ) ? \RM_GITHUB_PLUGIN_VERSION : '1.0.0';
-        $this->cache_key     = 'rm_github_plugin_updater';
+        $this->cache_key     = 'rm_github_plugin_updater_rmpu';
         $this->cache_allowed = true; // cache GitHub responses to avoid rate limits
         $this->basename      = $this->plugin_slug . '/' . $this->plugin_file;
         $this->auth_token    = defined( 'RM_GITHUB_PLUGIN_TOKEN' ) ? RM_GITHUB_PLUGIN_TOKEN : '';
